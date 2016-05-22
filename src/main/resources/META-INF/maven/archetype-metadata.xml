@@ -4,25 +4,25 @@
                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <fileSets>
     <fileSet encoding="UTF-8" filtered="true" packaged="true">
-      <directory>src/main/scala</directory>
+      <directory>src/main/scala/com/company/model</directory>
       <includes>
         <include>**/*.scala</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8" filtered="true" packaged="true">
-      <directory>src/main/java</directory>
+      <directory>src/main/java/com/company/model</directory>
       <includes>
         <include>**/*.java</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
-      <directory>src/test/scala</directory>
+      <directory>src/test/scala/com/company/model</directory>
       <includes>
         <include>**/*.scala</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
-      <directory>src/test/java</directory>
+      <directory>src/test/java/com/company/model</directory>
       <includes>
         <include>**/*.java</include>
       </includes>
