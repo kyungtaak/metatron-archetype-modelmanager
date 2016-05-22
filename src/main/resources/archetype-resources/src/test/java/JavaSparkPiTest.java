@@ -1,4 +1,3 @@
-package com.company.model;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.SparkContext;

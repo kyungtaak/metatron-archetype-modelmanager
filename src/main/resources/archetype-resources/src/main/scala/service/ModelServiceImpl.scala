@@ -1,4 +1,4 @@
-package com.company.model.service
+package service
 
 import com.company.model.entity.Chart.{Chart, ChartItem}
 import com.company.model.entity.ResponseEntity

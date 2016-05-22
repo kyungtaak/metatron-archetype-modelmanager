@@ -1,4 +1,4 @@
-package com.company.model.enums
+package enums
 
 /**
   * Supported analytics model

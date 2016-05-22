@@ -1,4 +1,4 @@
-package com.company.model.service
+package service
 
 import com.company.model.enums.Model.Model
 import org.apache.spark.SparkContext

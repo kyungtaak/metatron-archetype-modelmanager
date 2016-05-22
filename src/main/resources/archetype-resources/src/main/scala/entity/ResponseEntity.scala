@@ -1,4 +1,4 @@
-package com.company.model.entity
+package entity
 
 import com.company.model.entity.Chart.{Chart, InfoItem}
 
