@@ -2,10 +2,10 @@
            xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0 http://maven.apache.org/xsd/archetype-1.0.0.xsd">
   <id>archetype-modelmanager</id>
   <sources>
-    <source>src/main/java/JavaSparkPi.java</source>
-    <source>src/main/scala/SparkPi.java</source>
+    <source>src/main/java/com/company/model/JavaSparkPi.java</source>
+    <source>src/main/scala/com/company/model/SparkPi.java</source>
   </sources>
   <testSources>
-    <source>src/test/java/JavaSparkPiTest.java</source>
+    <source>src/test/java/com/company/model/JavaSparkPiTest.java</source>
   </testSources>
 </archetype>
