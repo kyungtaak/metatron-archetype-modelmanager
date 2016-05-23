@@ -1,4 +1,4 @@
-package entity.Chart
+package ${package}.entity.Chart
 
 /**
   * ChartItem info

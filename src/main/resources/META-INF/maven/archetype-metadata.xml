@@ -15,13 +15,13 @@
         <include>**/*.java</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
+    <fileSet encoding="UTF-8" filtered="true" packaged="true">
       <directory>src/test/scala</directory>
       <includes>
         <include>**/*.scala</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
+    <fileSet encoding="UTF-8" filtered="true" packaged="true">
       <directory>src/test/java</directory>
       <includes>
         <include>**/*.java</include>

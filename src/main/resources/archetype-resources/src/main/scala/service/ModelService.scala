@@ -1,6 +1,6 @@
-package service
+package ${package}.service
 
-import com.company.model.enums.Model.Model
+import ${package}.enums.Model.Model
 import org.apache.spark.SparkContext
 import org.apache.spark.sql.DataFrame
 

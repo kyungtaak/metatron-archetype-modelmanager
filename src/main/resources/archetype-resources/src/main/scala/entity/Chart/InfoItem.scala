@@ -1,4 +1,4 @@
-package entity.Chart
+package ${package}.entity.Chart
 
 import org.apache.spark.mllib.linalg.DenseMatrix
 

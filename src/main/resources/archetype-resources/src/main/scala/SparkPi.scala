@@ -1,3 +1,5 @@
+package ${package}
+
 import org.apache.spark.{SparkConf, SparkContext}
 
 import scala.math.random

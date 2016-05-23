@@ -1,4 +1,4 @@
-package enums
+package ${package}.enums
 
 /**
   * Supported analytics model

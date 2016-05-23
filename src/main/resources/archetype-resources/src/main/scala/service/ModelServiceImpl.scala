@@ -1,9 +1,9 @@
-package service
+package ${package}.service
 
-import com.company.model.entity.Chart.{Chart, ChartItem}
-import com.company.model.entity.ResponseEntity
-import com.company.model.enums.Model
-import com.company.model.enums.Model._
+import ${package}.entity.Chart.{Chart, ChartItem}
+import ${package}.entity.ResponseEntity
+import ${package}.enums.Model
+import ${package}.enums.Model._
 import org.apache.spark.SparkContext
 import org.apache.spark.mllib.linalg.distributed.RowMatrix
 import org.apache.spark.mllib.linalg.{Matrix, Vector, Vectors}
