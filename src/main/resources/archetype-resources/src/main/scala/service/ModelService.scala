@@ -1,6 +1,5 @@
 package ${package}.service
 
-import ${package}.enums.Model.Model
 import org.apache.spark.SparkContext
 import org.apache.spark.sql.DataFrame
 
@@ -10,25 +9,13 @@ import org.apache.spark.sql.DataFrame
 trait ModelService {
 
   /**
-    * evaluating
+    * evaluate
     *
-    * @param model      supported analytics model
-    * @param sc         SparkContext generated from Polaris
-    * @param dataSet    input data (DataFrame) from Polaris
+    * @param sc         SparkContext generated from Metatron
+    * @param dataSet    input data (DataFrame) from Metatron
     * @param parameters input parameter
     * @return DataFrame (SparkSQL)
     */
-  def evaluate(model: Model, sc: SparkContext, dataSet: DataFrame, parameters: Array[String]): DataFrame
-
-
-  /**
-    * training
-    *
-    * @param model   supported analytics model in Metis
-    * @param sc      SparkContext generated from Polaris
-    * @param dataSet input data (DataFrame) from Polaris
-    * @return DataFrame (SparkSQL)
-    */
-  def train(model: Model, sc: SparkContext, dataSet: DataFrame): DataFrame
+  def evaluate(sc: SparkContext, dataSet: DataFrame, parameters: Array[Object]): DataFrame
 
 }

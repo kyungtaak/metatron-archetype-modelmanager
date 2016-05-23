@@ -1,6 +1,6 @@
 package ${package}.entity
 
-import com.company.model.entity.Chart.{Chart, InfoItem}
+import ${package}.entity.Chart.{Chart, InfoItem}
 
 /**
   * Response entity (chart array & info array)
