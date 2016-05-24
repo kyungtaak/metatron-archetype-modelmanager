@@ -30,7 +30,7 @@ class ModelServiceImpl extends ModelService {
     * @param parameters input parameter
     * @return DataFrame (SparkSQL)
     */
-  override def evaluate(sc: SparkContext, dataSet: DataFrame, parameters: Array[String]): DataFrame = {
+  override def evaluate(sc: SparkContext, dataSet: DataFrame, parameters: Array[Object]): DataFrame = {
     val sqlContext: SQLContext = dataSet.sqlContext
 
     // 전달된 데이터 프레임
