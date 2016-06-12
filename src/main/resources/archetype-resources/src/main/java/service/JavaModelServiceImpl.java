@@ -18,9 +18,6 @@ public class JavaModelServiceImpl implements JavaModelService {
   @Override
   public DataFrame evaluateCustom1(SparkContext sc, DataFrame inputDataFrame, Object[] parameters) {
 
-    System.out.println("####### InputDataFrame : " + inputDataFrame);
-    System.out.println("####### Parameters     : " + parameters == null ? null : Arrays.toString(parameters));
-
     SQLContext sqlContext = new SQLContext(sc);
     JavaSparkContext jsc = new JavaSparkContext(sc);
 
@@ -34,11 +31,6 @@ public class JavaModelServiceImpl implements JavaModelService {
 
   @Override
   public DataFrame evaluateCustom2(SparkContext sc, DataFrame[] inputDataFrames, DataFrame modelDataFrame, Map<String, Object> parameters) {
-
-    System.out.println("####### InputDataFrames: " + inputDataFrames == null ? null : Arrays.toString(inputDataFrames));
-    System.out.println("####### ModelDataFrame : " + modelDataFrame);
-    System.out.println("####### Parameters     : " + parameters);
-
 
     SQLContext sqlContext = new SQLContext(sc);
     JavaSparkContext jsc = new JavaSparkContext(sc);

@@ -94,9 +94,29 @@
     </dependency>
 
     <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>18.0</version>
+    </dependency>
+
+    <dependency>
       <groupId>com.metamx</groupId>
       <artifactId>java-util</artifactId>
       <version>0.27.6</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>jackson-annotations</artifactId>
+          <groupId>com.fasterxml.jackson.core</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jackson-core</artifactId>
+          <groupId>com.fasterxml.jackson.core</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>guava</artifactId>
+          <groupId>com.google.guava</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- For Logging -->

@@ -20,7 +20,7 @@ public class ModelServiceTest {
 
     DataFrame df = sqlContext.emptyDataFrame();
 
-    DataFrame result = new ModelServiceImpl().evaluate(sc, df, new String[]{"PM1","PM2" });
+    DataFrame result = new ModelServiceImpl().evaluateCustom1(sc, df, new String[]{"PM1","PM2" });
     assertNotNull(result);
     result.printSchema();
     result.show();

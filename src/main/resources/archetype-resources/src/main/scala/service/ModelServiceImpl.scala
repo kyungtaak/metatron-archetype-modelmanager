@@ -25,9 +25,6 @@ class ModelServiceImpl extends ModelService {
 
   override def evaluateCustom1(sc: SparkContext, inputDataFrame: DataFrame, parameters: Array[Object]): DataFrame = {
 
-    println("####### InputDataFrame : " + inputDataFrame);
-    println("####### Parameters     : " + parameters);
-
     val sqlContext: SQLContext = inputDataFrame.sqlContext
 
     // 전달된 데이터 프레임을 분석을 위한 데이터 모델로 변환 과정 생략..
@@ -67,10 +64,6 @@ class ModelServiceImpl extends ModelService {
   }
 
   override def evaluateCustom2(sc: SparkContext, inputDataFrames: Array[DataFrame], modelDataFrame: DataFrame, parameters: Object): DataFrame = {
-
-    println("####### InputDataFrame : " + inputDataFrames);
-    println("####### ModelDataFrame : " + modelDataFrame);
-    println("####### Parameters     : " + parameters);
 
     val sqlContext:SQLContext = SQLContext.getOrCreate(sc);
 
