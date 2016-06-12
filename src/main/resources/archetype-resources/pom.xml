@@ -93,6 +93,12 @@
       <version>3.6</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>java-util</artifactId>
+      <version>0.27.6</version>
+    </dependency>
+
     <!-- For Logging -->
     <dependency>
       <groupId>org.slf4j</groupId>

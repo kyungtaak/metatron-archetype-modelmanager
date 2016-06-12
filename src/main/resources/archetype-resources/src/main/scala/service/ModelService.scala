@@ -9,13 +9,24 @@ import org.apache.spark.sql.DataFrame
 trait ModelService {
 
   /**
-    * evaluate
+    * CUSTOM1 Type
     *
-    * @param sc         SparkContext generated from Metatron
-    * @param dataSet    input data (DataFrame) from Metatron
-    * @param parameters input parameter
-    * @return DataFrame (SparkSQL)
+    * @param sc SparkContext generated from Metatron
+    * @param inputDataFrame  input data (DataFrame) from Metatron
+    * @param parameters input parameters (Array)
+    * @return DataFrame Analyzed result
     */
-  def evaluate(sc: SparkContext, dataSet: DataFrame, parameters: Array[Object]): DataFrame
+  def evaluateCustom1(sc: SparkContext, inputDataFrame: DataFrame, parameters: Array[Object]): DataFrame;
+
+  /**
+    * CUSTOM2 Type
+    *
+    * @param sc SparkContext generated from Metatron
+    * @param inputDataFrames input data(DataFrame Array) from Metatron
+    * @param modelDataFrame model data(DataFrame) from Metatron
+    * @param parameters input parameters (Key/Value Object like Map)
+    * @return DataFrame Analyzed result
+    */
+  def evaluateCustom2(sc: SparkContext, inputDataFrames: Array[DataFrame], modelDataFrame: DataFrame, parameters: Object): DataFrame;
 
 }

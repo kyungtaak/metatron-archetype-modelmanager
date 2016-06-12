@@ -2,10 +2,11 @@ package ${package}.service
 
 import java.io.StringWriter
 
-import ${package}.entity.Chart.{Chart, ChartItem}
-import ${package}.entity.ResponseEntity
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
+import ${package}.entity.Chart.{Chart, ChartItem}
+import ${package}.entity.ResponseEntity
+import ${package}.service.ModelService
 import org.apache.spark.SparkContext
 import org.apache.spark.mllib.linalg.distributed.RowMatrix
 import org.apache.spark.mllib.linalg.{Matrix, Vector, Vectors}
@@ -22,19 +23,12 @@ class ModelServiceImpl extends ModelService {
 
   val LOGGER = LoggerFactory.getLogger(classOf[ModelServiceImpl])
 
-  /**
-    * evaluate
-    *
-    * @param sc         SparkContext generated from Metatron
-    * @param dataSet    input data (DataFrame) from Metatron
-    * @param parameters input parameter
-    * @return DataFrame (SparkSQL)
-    */
-  override def evaluate(sc: SparkContext, dataSet: DataFrame, parameters: Array[Object]): DataFrame = {
-    val sqlContext: SQLContext = dataSet.sqlContext
+  override def evaluateCustom1(sc: SparkContext, inputDataFrame: DataFrame, parameters: Array[Object]): DataFrame = {
 
-    // 전달된 데이터 프레임
-    dataSet.printSchema();
+    println("####### InputDataFrame : " + inputDataFrame);
+    println("####### Parameters     : " + parameters);
+
+    val sqlContext: SQLContext = inputDataFrame.sqlContext
 
     // 전달된 데이터 프레임을 분석을 위한 데이터 모델로 변환 과정 생략..
     // 변환되었다고 가정하고 진행
@@ -70,6 +64,20 @@ class ModelServiceImpl extends ModelService {
 
     sqlContext.read.json(rddrow)
 
+  }
+
+  override def evaluateCustom2(sc: SparkContext, inputDataFrames: Array[DataFrame], modelDataFrame: DataFrame, parameters: Object): DataFrame = {
+
+    println("####### InputDataFrame : " + inputDataFrames);
+    println("####### ModelDataFrame : " + modelDataFrame);
+    println("####### Parameters     : " + parameters);
+
+    val sqlContext:SQLContext = SQLContext.getOrCreate(sc);
+
+    val anotherPeopleRDD = sc.parallelize(
+      """{"name":"Yin","address":{"city":"Columbus","state":"Ohio"}}""" :: Nil);
+
+    sqlContext.read.json(anotherPeopleRDD);
   }
 
   def convert(sc: SparkContext): DataFrame = {
